@@ -1,0 +1,43 @@
+{% extends "h.html" %}
+{% load static %}
+
+{% block pagetitle %}
+    Главная страница
+{% endblock %}
+
+{% block main %}
+<style>
+    .bold {
+        font-weight: bold;
+    }
+</style>
+
+    <br>
+    <div class="col-lg-12">
+    <div class="card">
+        <div class="card-body">
+
+                <h4 class="header-title">Список пространств</h4>
+                <hr/>
+
+                <div id="toolbar" class="btn-toolbar d-flex flex-wrap" role="toolbar" aria-label="Toolbar with button groups">
+
+                </div>
+
+                <table id="table" class="table table-sm" data-toolbar="#toolbar" data-search="true" data-sortable="true" data-show-refresh="true" data-show-columns="true" data-show-columns-toggle-all="true"
+                    data-click-to-select="true" data-minimum-count-columns="2" data-show-pagination-switch="true" data-page-list="[10, 25, 50, 100, 200]" data-pagination="true" data-side-pagination="server" data-total-field="count" data-data-field="results" data-id-field="id" data-show-footer="true"
+                    data-resizable="true" data-response-handler="responseHandler">
+                    <thead class="thead-light">
+                    </thead>
+                    <tbody class="searchable">
+                    </tbody>
+                </table>
+
+        </div>
+    </div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.20.2/bootstrap-table.min.js" integrity="sha512-9KY1w0S1bRPqvsNIxj3XovwFzZ7bOFG8u0K1LByeMVrzYhLu3v7sFRAlwfhBVFsHRiuMc6shv1lRLCTInwqxNg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js" integrity="sha512-3j3VU6WC5rPQB4Ld1jnLV7Kd5xr+cq9avvhwqzbH/taCRNURoeEpoPBK9pDyeukwSxwRPJ8fDgvYXd6SkaZ2TA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="{% static 'blockjs/testblock/testblock.js' %}"></script>
+{% endblock %}
