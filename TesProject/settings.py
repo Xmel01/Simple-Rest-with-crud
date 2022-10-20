@@ -13,6 +13,7 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 from pathlib import Path
 import os, mimetypes
 
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -28,7 +29,7 @@ SECRET_KEY = 'django-insecure-4^p)9h-_fj#_k=ny#q$%@)i5a41(x=0#o*n)7el*8agm5s7uun
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['TesProject.tech']
 
 
 # Application definition
@@ -83,8 +84,12 @@ WSGI_APPLICATION = 'TesProject.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'testapi',
+        'USER': 'xmel01',
+        'PASSWORD': '123',
+        'HOST': '46.243.143.12',
+        'PORT': '5432',
     }
 }
 
